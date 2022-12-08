@@ -3,9 +3,9 @@ from sys import stdin
 ELFS, YOUS = "ABC", "XYZ"
 
 def choose(elf, outcome):
-    outcome_map = "YZX"
+    outcome_map = "YXZ"
 
-    return YOUS[(ELFS.find(elf) + outcome_map.find(outcome)) % 3]
+    return YOUS[ELFS.find(elf) - outcome_map.find(outcome)]
 
 def points(elf, you):
     value_you = YOUS.find(you)
